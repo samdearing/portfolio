@@ -1,9 +1,20 @@
+function StatusBadge({ text }: { text: string }) {
+  return (
+    <span className="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-md border border-yellow-300">
+      {text}
+    </span>
+  );
+}
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-black px-6 py-20">
       <div className="max-w-4xl mx-auto">
 
         {/* Hero */}
+        <div className="mb-4">
+          <StatusBadge text="Website is under construction" />
+        </div>
+  
         <section className="mb-20">
           <h1 className="text-5xl font-bold mb-4">
             Samuel Dearing
@@ -65,9 +76,22 @@ export default function Home() {
           <h2 className="text-3xl font-semibold mb-4">
             Contact
           </h2>
-          <p className="text-gray-600">
-            samueldearing@outlook.com
-          </p>
+        <div className="text-gray-600 space-y-1">
+          <a
+            href="mailto:samueldearing@outlook.com"
+           className="block hover:text-black transition"
+          >
+           samueldearing@outlook.com
+          </a>
+          <a
+            href="tel:6027607761"
+            className="block hover:text-black transition"
+          >
+            (602) 760-7761
+          </a>
+        </div>
+
+
         </section>
 
       </div>
